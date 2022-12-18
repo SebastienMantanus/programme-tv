@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Program from "./components/Program";
+// import schedule from "./schedule.json";
+import logo from "./logo-m6.png";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <img alt="logo" src={logo} />
+        <h1>M6</h1>
       </header>
+      <main>
+        <Program />
+      </main>
     </div>
   );
 }
