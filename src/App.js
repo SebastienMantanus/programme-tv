@@ -1,6 +1,6 @@
 import "./App.css";
 import Program from "./components/Program";
-// import schedule from "./schedule.json";
+import schedule from "./schedule.json";
 import logo from "./logo-m6.png";
 
 function App() {
@@ -11,7 +11,22 @@ function App() {
         <h1>M6</h1>
       </header>
       <main>
-        <Program />
+        {/* TRAITEMENT JSON */}
+        {schedule.map((element, index) => {
+          console.log(element.title);
+          return (
+            <Program
+              id={index}
+              time={element.time}
+              title={element.title}
+              type={element.type}
+              duration={element.duration}
+              image={element.image}
+              isUnseen={element.isUnseen}
+              direct={element.direct}
+            />
+          );
+        })}
       </main>
     </div>
   );

@@ -1,16 +1,20 @@
-import pict from "../components/exemple.png";
-
 const Program = (props) => {
   return (
     <div className="mainContainer">
-      <p className="time">12h30</p>
-      <img alt="vignette" src={pict} />
+      <p className="time">{props.time}</p>
+      <img alt="vignette" src={props.image} />
       <div className="programDetails">
-        <h2>Tous en cuisine, en direct avec Cyril Lignac</h2>
-        <p>Magazine culinaire</p>
+        <h2>{props.title}</h2>
+        <p>{props.type}</p>
         <div className="bottomDetails">
-          <span>1h</span>
-          <span className="red">• direct/inedit</span>
+          <span>{props.duration}</span>
+          <span>
+            {props.direct ? <p className="red"> • Direct</p> : <p></p>}
+          </span>
+          <span>
+            {props.isUnseen ? <p className="red"> • Inédit</p> : <p></p>}
+          </span>
+          {/* <span className="red">"Inédit"</span> */}
         </div>
       </div>
     </div>
