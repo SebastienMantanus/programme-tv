@@ -4,8 +4,11 @@ const Program = (props) => {
       <p className="time">{props.time}</p>
       <img alt="vignette" src={props.image} />
       <div className="programDetails">
-        <h2>{props.title}</h2>
-        <p>{props.type}</p>
+        <div>
+          <h2>{props.title}</h2>
+          <p>{props.type}</p>
+        </div>
+
         <div className="bottomDetails">
           <span>{props.duration}</span>
           <span>

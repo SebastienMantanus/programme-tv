@@ -16,7 +16,7 @@ function App() {
           console.log(element.title);
           return (
             <Program
-              id={index}
+              key={index}
               time={element.time}
               title={element.title}
               type={element.type}

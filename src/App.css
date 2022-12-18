@@ -30,7 +30,7 @@ header > h1 {
 
 /* 
 --------------------------
----------- Main -------- 
+---------- Main ---------- 
 --------------------------
 */
 
@@ -50,16 +50,16 @@ header > h1 {
 }
 
 .programDetails {
-  /* border: solid blue 5px; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.programDetails > h2 {
+.programDetails h2 {
   font-weight: bold;
 }
-.programDetails > p {
+.programDetails > div > p {
+  margin-top: 10px;
   color: gray;
   font-size: 12px;
 }
